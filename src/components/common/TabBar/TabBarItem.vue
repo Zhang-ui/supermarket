@@ -29,8 +29,11 @@ export default {
     colorStyle(){
       return this.isActive?{color:this.activeColor}:{}
     },
-    isActive(){
-      return  this.isActive = this.$route.path.indexOf(this.path)!==-1;
+    isActive:{
+      get(){
+        return  this.isActive = this.$route.path.indexOf(this.path)!==-1;
+      },
+      set(){}
     }
   },
   methods:{
